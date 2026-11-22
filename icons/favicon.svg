@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FFFFFF" rx="64"/>
+  
+  <!-- Letter A - Elegant Serif Style -->
+  <path d="M 256 120 L 380 420 L 340 420 L 315 355 L 197 355 L 172 420 L 132 420 L 256 120 Z M 256 180 L 210 330 L 302 330 L 256 180 Z" 
+        fill="#2A1C2A" 
+        stroke="#2A1C2A" 
+        stroke-width="2"/>
+  
+  <!-- Subtle accent line (optional refinement) -->
+  <line x1="197" y1="355" x2="315" y2="355" stroke="#85586F" stroke-width="3" opacity="0.4"/>
+</svg>
