@@ -1,5 +1,5 @@
 /* Service Worker: Offline-Modus. CORE = alle Seiten, CSS/JS, Icons und genutzte Bilder (Stand 19.11.2026). */
-const VERSION = 'atelier-book-20261121-v57-inhalt';
+const VERSION = 'atelier-book-20261123-v60-strich';
 const CORE = [
  "./",
  "./index.html",
@@ -36,19 +36,18 @@ const CORE = [
  "./rezept-purpur-salat.html",
  "./rezept-quinoa-bowl.html",
  "./rezept-radicchio-fenchel.html",
+ "./rezept-rahmensuppe.html",
  "./rezept-raspberry-bliss.html",
  "./rezept-roja.html",
  "./rezept-rosso-mediterraneo.html",
  "./rezept-rote-bete-gulasch.html",
  "./rezept-spicy-karottensuppe.html",
- "./rezept-suppe-hundertjaehrige.html",
  "./rezept-tomatentatar.html",
  "./rezept-white-slaw.html",
  "./vorwort.html",
  "./wissen-hebel.html",
  "./wissen-koerper.html",
  "./wissen-longevity.html",
- "./wissen-mahlzeit-aufbauen.html",
  "./css/design-system.css",
  "./fonts/cormorant-garamond-normal-300.woff2",
  "./fonts/fonts.css",
@@ -113,6 +112,7 @@ const CORE = [
  "./images/thumb-parmigiana-beluga.jpg",
  "./images/thumb-purpur-salat.jpg",
  "./images/thumb-radicchio-fenchel.jpg",
+ "./images/thumb-rahmensuppe.jpg",
  "./images/thumb-raspberry-bliss.jpg",
  "./images/thumb-rosso-mediterraneo.jpg",
  "./images/thumb-rote-bete-gulasch.jpg",

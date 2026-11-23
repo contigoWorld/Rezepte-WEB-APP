@@ -1,6 +1,4 @@
-# Bild-Manifest – Atelier for Food (Stand 19.11.2026)
-
-Schema: [kategorie]-[beschreibung].jpg (kapitel-, rezept-, thumb-, wissen-, vorwort-, abschluss-, cover).
+# Bild-Manifest – Atelier for Food (Stand 23.11.2026)
 
 | Bild | Größe | Verwendet in |
 |---|---|---|
@@ -33,7 +31,7 @@ Schema: [kategorie]-[beschreibung].jpg (kapitel-, rezept-, thumb-, wissen-, vorw
 | rezept-rosso-mediterraneo.jpg | 343 KB | rezept-rosso-mediterraneo.html |
 | rezept-rote-bete-gulasch.jpg | 320 KB | rezept-rote-bete-gulasch.html |
 | rezept-spicy-karottensuppe.jpg | 248 KB | rezept-spicy-karottensuppe.html |
-| rezept-suppe.jpg | 538 KB | inhalt.html, rezept-suppe-hundertjaehrige.html |
+| rezept-suppe.jpg | 538 KB | rezept-rahmensuppe.html |
 | rezept-tomatentatar.jpg | 351 KB | inhalt.html, rezept-tomatentatar.html |
 | rezept-white-slaw.jpg | 372 KB | rezept-white-slaw.html |
 | thumb-brombeer-rote-bete-drink.jpg | 23 KB | inhalt.html |
@@ -51,6 +49,7 @@ Schema: [kategorie]-[beschreibung].jpg (kapitel-, rezept-, thumb-, wissen-, vorw
 | thumb-parmigiana-beluga.jpg | 26 KB | inhalt.html |
 | thumb-purpur-salat.jpg | 37 KB | inhalt.html |
 | thumb-radicchio-fenchel.jpg | 32 KB | inhalt.html |
+| thumb-rahmensuppe.jpg | 30 KB | inhalt.html |
 | thumb-raspberry-bliss.jpg | 23 KB | inhalt.html |
 | thumb-rosso-mediterraneo.jpg | 34 KB | inhalt.html |
 | thumb-rote-bete-gulasch.jpg | 33 KB | inhalt.html |
@@ -59,5 +58,5 @@ Schema: [kategorie]-[beschreibung].jpg (kapitel-, rezept-, thumb-, wissen-, vorw
 | vorwort-fenster.jpg | 245 KB | vorwort.html |
 | vorwort-garten.jpg | 503 KB | vorwort.html |
 | vorwort-kueche.jpg | 344 KB | vorwort.html |
-| wissen-koerper.jpg | 619 KB | wissen-koerper.html |
+| wissen-koerper.jpg | 225 KB | wissen-koerper.html |
 | wissen-longevity.jpg | 491 KB | wissen-longevity.html |

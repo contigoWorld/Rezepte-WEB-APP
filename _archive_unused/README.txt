@@ -11,3 +11,8 @@ rezepte-rohtexte-quelle/      Rohtexte der Rezepte (Quelle für die Daten)
 screenshots/                  Prüf-Screenshots aus der Entwicklung
 root/                         motto-variante-b/c/d.html (unverlinkte Titelvarianten), BRIEFING.md, Textexport-Korrektur.pdf
 Zurückholen: Datei wieder an den ursprünglichen Ort verschieben (bei Bildern: images/).
+
+Nachtrag 23.11.2026:
+root/wissen-mahlzeit-aufbauen-seite10.html   entfernte Seite 10 "So baust du eine Mahlzeit"
+root/rezept-suppe-hundertjaehrige-editorial-alt.html   alte Editorial-Seite 28 (jetzt Rezept Rahmensuppe)
+images/wissen-koerper-birnen-alt.jpg   altes Bild von Seite 8 (pochierte Birnen)

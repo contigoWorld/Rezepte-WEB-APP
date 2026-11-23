@@ -1,5 +1,5 @@
 /* Atelier for Food: Web-App-Funktionen.
-   Favoriten, Portionsrechner, Timer, Abhaken, Vorlesen, Suche und Filter, Dark Mode, Offline. */
+   Favoriten, Portionsrechner, Timer, Abhaken, Suche und Filter, Dark Mode, Offline. */
 (function () {
   'use strict';
   var L = window.BookLib;
@@ -17,7 +17,6 @@
     heartFill: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20.5s-7.3-4.5-9.2-9C1.5 8.300 3.300 5 6.500 5c1.900 0 3.500 1 4.500 2.600C12 6 13.600 5 15.500 5c3.200 0 5 3.300 3.700 6.500-1.900 4.500-7.200 9-7.200 9z" fill="currentColor" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>',
     cart: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 8h14l-1.200 11H6.200z M9 8V6.500a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></svg>',
     clock: '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M12 9v4.500l3 1.500M9.500 3h5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>',
-    speaker: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9.500v5h3.500L12 18.500v-13L7.500 9.500z M15.500 9a4 4 0 0 1 0 6 M18 6.500a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></svg>'
   };
 
   /* ---------------------------------------------------------- Hell / Dunkel */
@@ -465,44 +464,6 @@
     });
   }
 
-  /* ---------------------------------------------------------- Vorlesen */
-  function initSpeech(rec) {
-    var btn = $('[data-action="speak"]', rec);
-    if (!btn) { return; }
-    if (!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') { return; }
-    btn.hidden = false;
-    var on = false;
-    function paint() {
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      btn.innerHTML = ICON.speaker + '<span>' + (on ? 'Anhalten' : 'Vorlesen') + '</span>';
-    }
-    function text() {
-      var parts = [($('h1', rec) || {}).textContent || '', 'Die Elemente.'];
-      $$('.elements li', rec).forEach(function (li) {
-        var sp = li.querySelectorAll(':scope > span');
-        parts.push(Array.prototype.map.call(sp, function (s) { return s.textContent; }).join(', ') + '.');
-      });
-      parts.push('Das Ritual.');
-      $$('.ritual li', rec).forEach(function (li) {
-        var c = li.cloneNode(true);
-        $$('.timer-row, .ritual__num', c).forEach(function (n) { n.parentNode.removeChild(n); });
-        parts.push(c.textContent.replace(/\s+/g, ' ').trim());
-      });
-      return parts.join(' ');
-    }
-    btn.addEventListener('click', function () {
-      if (on) { window.speechSynthesis.cancel(); on = false; paint(); return; }
-      var u = new SpeechSynthesisUtterance(text());
-      u.lang = 'de-DE'; u.rate = 0.95;
-      u.onend = u.onerror = function () { on = false; paint(); };
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
-      on = true; paint();
-    });
-    window.addEventListener('pagehide', function () { window.speechSynthesis.cancel(); });
-    paint();
-  }
-
   /* ---------------------------------------------------------- Suche und Filter */
   function initFilter() {
     var box = $('.filter');
@@ -562,7 +523,7 @@
     initScrollButtons();
     initPaging();
     var rec = $('[data-recipe]');
-    if (rec && rec.classList.contains('split__body')) { initFav(rec); initShopButton(rec); initChecks(rec); initTimers(rec); initSpeech(rec); }
+    if (rec && rec.classList.contains('split__body')) { initFav(rec); initShopButton(rec); initChecks(rec); initTimers(rec); }
     initShopList();
     initTabs();
     $$('[data-recipe]').forEach(function (r) { initPortions(r); });

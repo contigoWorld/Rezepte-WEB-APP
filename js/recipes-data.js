@@ -432,8 +432,14 @@ window.BOOK_RECIPES = {
    }
   ]
  },
+ "rahmensuppe": {
+  "t": "Rahmensuppe",
+  "base": 4,
+  "label": "Portionen",
+  "items": []
+ },
  "comfort-soup": {
-  "t": "Longevity Comfort Soup",
+  "t": "Die Suppe der Hundertjährigen",
   "base": 4,
   "label": "Portionen",
   "items": [
