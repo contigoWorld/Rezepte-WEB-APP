@@ -1463,3 +1463,54 @@ html:not([data-theme="dark"]) .kn-list--mark li::before { background: var(--colo
 .kn-list--mark li { padding-left: 1.7rem; }
 .kn-list--mark li::before { width: .7rem; }
 @media (max-width: 600px) { .kn-list--mark li { padding-left: 1.4rem; } .kn-list--mark li::before { width: .6rem; } }
+
+/* ==========================================================================
+   Neue Texte (26.11.2026): Cover, Vorwort, Begleiter, Wissensseiten, Philosophie
+   ========================================================================== */
+.cover__kicker { margin-bottom: var(--space-3); font-family: var(--font-sans); font-weight: 500; font-size: 10pt; letter-spacing: .45em; text-transform: uppercase; color: rgba(255,255,255,.85); text-shadow: 0 1px 14px rgba(0,0,0,.5); }
+.cover__tagline { margin-top: var(--space-3); font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 22pt; color: var(--color-sand); text-shadow: 0 1px 18px rgba(0,0,0,.5); }
+.cover__edition { margin-top: var(--space-1); font-family: var(--font-sans); font-weight: 300; font-size: 9pt; letter-spacing: .3em; text-transform: uppercase; color: rgba(255,255,255,.75); text-shadow: 0 1px 14px rgba(0,0,0,.5); }
+.fw-sign__tag { font-family: var(--font-sans); font-weight: 500; font-size: 10pt; letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--color-grey); margin-bottom: var(--space-1); }
+.kn-cols--2 { grid-template-columns: repeat(2, 1fr); margin-top: var(--space-4); }
+.kn-col__sub { font-family: var(--font-sans); font-size: 9pt !important; letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--color-grey); margin: -.6rem 0 .8rem; }
+.kn-col__steps { list-style: none; padding: 0; margin: .4rem 0 .8rem; }
+.kn-col__steps li { padding: .45rem 0; }
+.kn-col__steps strong { font-weight: 500; color: var(--color-black); }
+.kn-col p + p { margin-top: .9rem; }
+.philo-intro { margin-top: var(--space-3); max-width: 66ch; }
+.tabpanel__tag { margin-top: .3rem; font-family: var(--font-serif); font-style: italic; font-size: 20pt; line-height: 1.3; color: var(--color-sand); }
+.tabpanel__body { margin-top: var(--space-2); max-width: 62ch; }
+.tabpanel__body p { color: var(--color-grey); font-size: 13.5pt; line-height: 1.75; margin-bottom: 1em; }
+.tabpanel__cols p { color: var(--color-grey); font-size: 12.5pt; line-height: 1.6; margin-bottom: .6rem; }
+.tabpanel__cols .kn-col__sub { margin: .9rem 0 .3rem; }
+.tabpanel__cols strong { font-weight: 500; color: var(--color-black); }
+.tabpanel .kn-sub { margin-top: var(--space-3); }
+@media (max-width: 900px) { .kn-cols--2 { grid-template-columns: 1fr; } .cover__tagline { font-size: 17pt; } .cover__kicker { font-size: 8.5pt; letter-spacing: .35em; } }
+html:not([data-theme="dark"]) .tabpanel__tag { color: var(--color-mauve); }
+
+/* ==========================================================================
+   Änderungen 26.11.2026 (2)
+   - Cover: Autorenname statt "Eintreten"
+   - Seite 2: Motto
+   - Einspaltige Texte nutzen die volle vorgesehene Seitenbreite
+   ========================================================================== */
+.cover__author { font-family: var(--font-serif); font-size: 18pt; letter-spacing: .22em; text-transform: none; font-weight: 400; }
+.halftitle__sub { color: var(--color-sand); }
+html:not([data-theme="dark"]) .halftitle__sub { color: var(--color-grey); }
+.halftitle .halftitle__quote { max-width: none; }
+
+/* Vorwort: Fließtexte über die ganze Inhaltsbreite (1200px-Spalte), nicht in zwei Spalten */
+.fw-cols { columns: 1; max-width: none; margin: 0; }
+.fw-pause__text { max-width: none; margin: 0; text-align: left; }
+.fw-pause__big { max-width: none; }
+
+/* Wissensseiten: Text über die gesamte Seitenbreite (.page__inner = 1040px) */
+.kn-text p, .page-lead, .philo-intro, .philo-intro p, .tabpanel__intro, .tabpanel__body, .tabpanel__body p, .tabpanel .bb__tip { max-width: none; }
+.philo-intro { max-width: none; }
+.quote-band .meta { color: var(--color-plum); opacity: .75; }
+
+/* Einzeilige Titel/Aussagen am Desktop (auf dem Handy dürfen sie umbrechen) */
+@media (min-width: 1000px) {
+  .page-title--line { white-space: nowrap; font-size: 36pt; max-width: none; }
+  .kn-text .fw-display--line { max-width: none; white-space: nowrap; font-size: 28pt; }
+}
