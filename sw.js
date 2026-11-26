@@ -1,5 +1,5 @@
 /* Service Worker: Offline-Modus. CORE = alle Seiten, CSS/JS, Icons und genutzte Bilder (Stand 19.11.2026). */
-const VERSION = 'atelier-book-20261126-v64-zeile';
+const VERSION = 'atelier-book-20261127-v66-storytelling';
 const CORE = [
  "./",
  "./index.html",
@@ -45,12 +45,7 @@ const CORE = [
  "./rezept-tomatentatar.html",
  "./rezept-white-slaw.html",
  "./vorwort.html",
- "./wissen-hebel.html",
- "./wissen-koerper.html",
- "./wissen-kombination.html",
  "./wissen-longevity.html",
- "./wissen-versorgt.html",
- "./wissen-vielfalt.html",
  "./css/design-system.css",
  "./fonts/cormorant-garamond-normal-300.woff2",
  "./fonts/fonts.css",
@@ -74,9 +69,6 @@ const CORE = [
  "./images/kapitel-2.jpg",
  "./images/kapitel-3.jpg",
  "./images/kapitel-4.jpg",
- "./images/mahlzeit-gemuese.jpg",
- "./images/philosophie-fette.jpg",
- "./images/philosophie-pflanzenstoffe.jpg",
  "./images/rezept-brokkolisalat.jpg",
  "./images/rezept-brombeer-rote-bete-drink.jpg",
  "./images/rezept-comfort-soup.jpg",
@@ -127,7 +119,6 @@ const CORE = [
  "./images/vorwort-fenster.jpg",
  "./images/vorwort-garten.jpg",
  "./images/vorwort-kueche.jpg",
- "./images/wissen-koerper.jpg",
  "./images/wissen-longevity.jpg"
 ];
 self.addEventListener('install', function (e) {
